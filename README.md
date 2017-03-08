@@ -16,7 +16,7 @@ Select which functions are to be deployed based on region and stage.
 npm install serverless-plugin-select --save-dev
 ```
 
-* Add the plugin to the `plugins` array in your Serverless `serverless.yml`, you should place it at the of the list:
+* Add the plugin to the `plugins` array in your Serverless `serverless.yml`, you should place it at the top of the list:
 
 ```yml
 plugins:
@@ -26,7 +26,7 @@ plugins:
 
 * Add `regions` or `stages` in your functions to select for deployment
 
-* Run deploy command `sls deploy --stage STAGE --region REGION` or `sls deploy function --stage STAGE --region REGION --function FUNCTION-NAME`
+* Run deploy command `sls deploy --stage [STAGE NAME] --region [REGION NAME]` or `sls deploy function --stage [STAGE NAME] --region [REGION NAME] --function [FUNCTION NAME]`
 
 * Functions will be deployed based on your selection
 
