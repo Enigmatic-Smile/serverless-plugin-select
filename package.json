@@ -1,0 +1,33 @@
+{
+  "name": "serverless-plugin-select",
+  "version": "1.0.0-rc.1",
+  "description": "Serverless plugin that selects which functions are to be deployed.",
+  "main": "src/index.js",
+  "scripts": {
+    "lint": "node_modules/.bin/standard src/**",
+    "lint:fix": "node_modules/.bin/standard --fix src/**"
+  },
+  "author": "Gonçalo Neves",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FidelLimited/serverless-plugin-select.git"
+  },
+  "keywords": [
+    "serverless plugin select functions",
+    "serverless select",
+    "serverless plugin",
+    "lambda serverless",
+    "select lambda for deploy"
+  ],
+  "bugs": {
+    "url": "https://github.com/FidelLimited/serverless-plugin-select/issues"
+  },
+  "homepage": "https://github.com/FidelLimited/serverless-plugin-select#readme",
+  "dependencies": {
+    "bluebird": "^3.5.0"
+  },
+  "devDependencies": {
+    "standard": "^9.0.1"
+  }
+}
