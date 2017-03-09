@@ -34,7 +34,7 @@ plugins:
 
 #### Function
 
-* **How it works?** When deployment region or stage don't match function regions or stages, that function will be deleted for deployment. 
+* **How it works?** When deployment region or stage don't match function regions or stages, that function will be deleted from deployment. 
 
 * **regions** - Function accepted deployment regions.
 
