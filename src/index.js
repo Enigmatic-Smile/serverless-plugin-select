@@ -28,20 +28,20 @@ class Select {
 
     /** Serverless hooks */
     this.hooks = {
-      'before:deploy:function:packageFunction': this.beforeCreateDeploymentArtifacts.bind(this),
-      'before:deploy:createDeploymentArtifacts': this.beforeCreateDeploymentArtifacts.bind(this)
+      'after:deploy:initialize': this.deployHook.bind(this),
+      'before:deploy:function:initialize': this.deployHook.bind(this)
     }
   }
 
   /**
-   * @description Before create deployment artifacts
+   * @description Deploy hook
    *
    * @fulfil {} — Functions optimized
    * @reject {Error} Optimization error
    *
    * @return {(boolean|Promise)}
    * */
-  beforeCreateDeploymentArtifacts () {
+  deployHook () {
     /** Skip function selection */
     if (this.options.noDeploy) {
       return false
