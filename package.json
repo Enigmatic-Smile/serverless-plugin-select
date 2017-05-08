@@ -1,6 +1,6 @@
 {
   "name": "serverless-plugin-select",
-  "version": "1.0.1-rc.1",
+  "version": "2.0.0-rc.1",
   "description": "Serverless plugin that selects which functions are to be deployed.",
   "main": "src/index.js",
   "scripts": {
@@ -28,6 +28,6 @@
     "bluebird": "^3.5.0"
   },
   "devDependencies": {
-    "standard": "^9.0.1"
+    "standard": "^10.0.2"
   }
 }
