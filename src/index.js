@@ -28,7 +28,7 @@ class Select {
 
     /** Serverless hooks */
     this.hooks = {
-      'after:deploy:initialize': this.deployHook.bind(this),
+      'after:package:initialize': this.deployHook.bind(this),
       'before:deploy:function:initialize': this.deployHook.bind(this)
     }
   }
