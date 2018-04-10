@@ -23,7 +23,7 @@
   "bugs": {
     "url": "https://github.com/FidelLimited/serverless-plugin-select/issues"
   },
-  "homepage": "https://github.com/FidelLimited/serverless-plugin-select#readme",
+  "homepage": "https://github.com/FidelLimited/serverless-plugin-select",
   "dependencies": {
     "bluebird": "^3.5.0"
   },
