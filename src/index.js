@@ -26,6 +26,16 @@ class Select {
     this.serverless = serverless
     this.options = options
 
+    /** Add validation support */
+    if (this.hasValidationSupport(serverless)) {
+      serverless.configSchemaHandler.defineFunctionProperties(serverless.service.provider.name, {
+        properties: {
+          regions: {type: 'array', uniqueItems: true},
+          stages: {type: 'array', uniqueItems: true}
+        }
+      })
+    }
+
     /** Serverless hooks */
     this.hooks = {
       'after:package:initialize': this.deployHook.bind(this),
@@ -120,6 +130,17 @@ class Select {
       /** Resolve with function object */
       resolve(functionObject)
     })
+  }
+
+  /**
+   * Validates serverless object has required validation fields
+   * @param {*} serverless
+   * @return {boolean} Whether installed serverless supports validation
+   * */
+  hasValidationSupport (serverless) {
+    return serverless.configSchemaHandler &&
+           serverless.configSchemaHandler.defineFunctionProperties &&
+           typeof serverless.configSchemaHandler['defineFunctionProperties'] === 'function'
   }
 }
 
